@@ -34,3 +34,29 @@ export function encriptar(frase){
     // Para unir todos los elementos en el array
     return fraseArray.join("")
 }
+
+export function desencriptar(nuevoTexto){
+    //let vocalesEncript = ["ai","enter","imes","ober","ufat"]
+    let fraseArray =[]
+    for (let i = 0; i < nuevoTexto.length; i++) {
+        fraseArray.push(nuevoTexto[i])
+    }
+    for (let i = 0; i < fraseArray.length; i++) {
+        if(fraseArray[i] == "a"){
+            fraseArray.splice(i+1,1, '')
+        }
+        if(fraseArray[i] == "e"){
+            fraseArray.splice(i+1,4, '')
+        }
+        if(fraseArray[i] == "i"){
+            fraseArray.splice(i+1,3, '')
+        }
+        if(fraseArray[i] == "o"){
+            fraseArray.splice(i+1,3, '')
+        }
+        if(fraseArray[i] == "u"){
+            fraseArray.splice(i+1,3, '')
+        }
+    }
+    return fraseArray.join("")
+}
