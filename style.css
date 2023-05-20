@@ -1,8 +1,10 @@
 *{
     font-family: 'Inter';
+    
 }
 body{
-    background-color: #F3F5FC;
+    /* background-color: #F3F5FC; */
+    background-color: #D4EFF8;
     font-family: 'Inter';
 }
 header{
@@ -25,7 +27,7 @@ header{
     font-size: 32px;
     display: block;
     color: #0A3871;
-    background-color: #F3F5FC;
+    background-color: #D4EFF8;
     border: none;
     width: 680px;
     height: 944px;
@@ -36,7 +38,7 @@ header{
 }
 .mensaje{
     margin-right: 40px;
-    background-color: white;
+    background-color: #BEE9F7;
     width: 400px;
     height: 944px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -47,7 +49,20 @@ header{
     color: #495057;
     float: right;
 }
-
+.mensaje-interno{
+    height: 85%;
+}
+.copiar{
+    display: none;
+    
+    width: 300px;
+    height: 67px;
+    margin: 20px auto;
+    border-radius: 24px;
+    border: none;
+    background: #2C598F;
+    color: white;
+}
 .imagen-mensaje{
     margin-top: 243px;
 }
@@ -132,8 +147,9 @@ header{
         height: 133px;
 
         padding-top: 10px;
-
-        
+    }
+    .mensaje-interno{
+        height: 85%;
     }
     .imagen-mensaje{
         display: none;
