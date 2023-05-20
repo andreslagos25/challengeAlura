@@ -27,7 +27,7 @@ botonEncriptar.addEventListener("click", ()=>{
     mensajeEvento.style.display = 'flex';
     mensajeEvento.style.flexDirection = 'column-reverse';
     // Creamos el nodo de texto con el texto encriptado
-    let escribirTexto = document.createTextNode(nuevoTexto)
+    var escribirTexto = document.createTextNode(nuevoTexto)
     
     
     if(mensaje){
@@ -69,7 +69,7 @@ botonEncriptar.addEventListener("click", ()=>{
         let prueba = document.getElementById("nuevoContenedor")
 
         prueba.appendChild(nuevoParrafo)
-     }
+    }
 })
 
 botonDesencriptar.addEventListener("click", () =>{
@@ -122,4 +122,14 @@ botonDesencriptar.addEventListener("click", () =>{
 
         prueba.appendChild(nuevoParrafo)
      }
+})
+botonCopiar.addEventListener("click", () =>{
+    let textoCopiar = document.getElementById("parrafoNuevo").innerText
+    navigator.clipboard.writeText(textoCopiar)
+        .then(() =>{
+            console.log(textoCopiar)
+        })
+        .catch(err =>{
+            console.error('Error al copiar el portapaeles: ', err)
+        })
 })
